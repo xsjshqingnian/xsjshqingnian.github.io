@@ -1,13 +1,13 @@
 ---
 layout: post
-title: template page
-categories: [cate1, cate2]
-description: some word here
-keywords: keyword1, keyword2
+title: ceph install alone
+categories: [ceph]
+description: ceph install alone
+keywords: ceph, install, alone
 ---
 
 1.Centos 7
-   + 关闭防火墙
++ 关闭防火墙
 + 关闭selinux
 + 配置网络
 + 修改hosts文件
