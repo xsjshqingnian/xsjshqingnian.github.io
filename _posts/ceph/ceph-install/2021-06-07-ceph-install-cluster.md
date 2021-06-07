@@ -13,10 +13,10 @@ keywords: ceph, install, cluster
     + 修改hosts文件
 
 ## 2.在deploy节点
-    + 执行以下命令(可以不执行)
-    ```
+
++ 执行以下命令(可以不执行)
+
     sudo yum install -y yum-utils && sudo yum-config-manager --add-repo https://dl.fedoraproject.org/pub/epel/7/x86_64/ && sudo yum install --nogpgcheck -y epel-release && sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7 && sudo rm /etc/yum.repos.d/dl.fedoraproject.org*
-    ```
 
 ## 3.所有节点安装：
 
