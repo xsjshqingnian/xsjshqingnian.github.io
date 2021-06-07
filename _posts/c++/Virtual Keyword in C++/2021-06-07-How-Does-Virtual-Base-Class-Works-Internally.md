@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How Does Virtual Base Class Works Internally?
+title: part2.How Does Virtual Base Class Works Internally?
 categories: [C++]
 description: How Does Virtual Base Class Works Internally
 keywords: C++, Virtual Base Class

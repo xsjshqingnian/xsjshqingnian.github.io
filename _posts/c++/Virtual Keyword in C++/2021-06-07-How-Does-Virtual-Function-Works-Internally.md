@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How Does Virtual Function Works Internally?
+title: part1.How Does Virtual Function Works Internally?
 categories: [C++]
 description: How Does Virtual Function Works Internally
 keywords: C++, Virtual Function

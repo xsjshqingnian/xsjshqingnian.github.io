@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How Does Virtual Destructor Works?
+title: part3.How Does Virtual Destructor Works?
 categories: [C++]
 description: How Does Virtual Destructor Works
 keywords: C++, Virtual Destructor
