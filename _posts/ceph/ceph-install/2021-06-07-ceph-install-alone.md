@@ -4,17 +4,19 @@ title: ceph install alone
 categories: [ceph]
 description: ceph install alone
 keywords: ceph, install, alone
+
 ---
 
-1.Centos 7
+## 1.Centos 7
+
 + 关闭防火墙
 + 关闭selinux
 + 配置网络
 + 修改hosts文件
 
-2. 在节点上创建ceph repo
+## 2.在节点上创建ceph repo
 
-+ 1. 创建/etc/yum.repos.d/ceph.repo，内容如下：
++ 创建/etc/yum.repos.d/ceph.repo，内容如下：
 
 ```
 [Ceph]
@@ -43,27 +45,28 @@ gpgkey=https://mirrors.aliyun.com/ceph/keys/release.asc
 priority=1
 ```
 
-3. 安装ceph-deploy python-setuptools
+## 3.安装ceph-deploy python-setuptools
 
 ```
 yum install ceph-deploy python-setuptools -y
 ```
 
-4. 创建文件夹
+## 4.创建文件夹
+
 ```
 mkdir /home/my-clu
 ```
 
+## 5.创建mon
 
-5. 创建mon
 ```
 # cephalone为主机名
 cd /home/my-clu
 ceph-deploy new cephalone
 ```
 
+## 6.修改配置文件
 
-6. 修改配置文件
 ```
 cd /home/my-clu
 vim ceph.conf
@@ -73,13 +76,14 @@ osd_pool_default_min_size = 1              #pool的备份数
 osd_pool_default_size = 1                  #后续创建的osd硬盘的个数
 ```
 
-7. 在节点上安装ceph
+## 7.在节点上安装ceph
+
 ```
 ceph-deploy install cephalone
 ```
 
+## 8.在节点上执行
 
-8. 在节点上执行
 ```
 1. ceph-deploy mon create-initial
 2. ceph-deploy admin cephalone
@@ -94,7 +98,7 @@ ceph-deploy install cephalone
 
 ```
 
-9. 在节点上
+## 9.在节点上
 
 ```
 创建文件系统
@@ -103,7 +107,7 @@ ceph osd pool create cephfs_metadata <pg_num>
 ceph fs new <fs_name> cephfs_metadata cephfs_data
 ```
 
-10. 挂在cephfs
+## 10.挂载cephfs
 
 ```
 # {admin-secret}：为/etc/ceph/ceph.client.admin.keyring文件key值
@@ -113,5 +117,4 @@ mount.ceph 192.168.10.100:6789:/ /mnt/ -o name=admin,secret={admin-secret}
 
 
 ```
-
 
