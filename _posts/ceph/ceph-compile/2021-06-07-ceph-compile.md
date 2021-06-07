@@ -10,8 +10,14 @@ keywords: ceph, compile
 ## 1.修改pip源
 
 + mkdir ~/.pip
+
 + touch ~/.pip/pip.conf
+
+
+
+
 添加如下内容：
+
 ```
 [global]
 index-url = https://pypi.mirrors.ustc.edu.cn/simple/
