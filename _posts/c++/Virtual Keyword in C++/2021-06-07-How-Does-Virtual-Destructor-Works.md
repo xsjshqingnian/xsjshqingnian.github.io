@@ -88,7 +88,7 @@ virtual ~protocol_t() { cout<<"~protocol_t"; delete _type; }
 - This way it calls the destructor of the object pointed i.e. either `~wifi_t()` or `~bluetooth_t()` by pointer `protocol` & then call the destructor of its base class i.e. `~protocol_t()`.
 - Hence, ***virtual destructor uses to delete the object pointed by base class pointer/reference\***.
 
- ## 2.How Does Virtual Destructor Works?
+## 2.How Does Virtual Destructor Works?
 
 - The question is how our destructor of a derived class called. The answer is simple it calls the destructor indirectly i.e. using virtual table pointer(`_vptr`). Let’s understand it with the assumption that our pointer `protocol` points to an object of type `wifi_t`.
 
